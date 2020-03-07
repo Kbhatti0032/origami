@@ -1,0 +1,54 @@
+<%- include('_layouts/header') -%>
+<nav>
+	<ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/editHeader/header">Edit Header</a></li>
+        <li><a class="active" href="/contact">Add Page</a></li>
+        <li><a href="/allpages">View Pages</a></li>
+        <li><a href="/logout">Logout</a></li>
+	</ul>
+</nav>
+<main>
+    <section>
+        <h1>Add Page</h1>
+        <form method="POST" action="/contact" enctype="multipart/form-data">
+            <div class="form-field">
+                <label for="title">Title:</label>
+                <input type="text" class="form-input" name="title">
+            </div>
+            <div class="form-field">
+                <label for="slug">Slug:</label>
+                <input type="text" class="form-input" name="slug">
+            </div>
+            <div class="form-field">
+                <label for="myimage">Image:</label>
+                <input type="file" class="form-input" name="myimage" id="myimage">
+            </div>
+            <div class="form-field">
+                <label for="message">Content:</label>
+                <textarea id="message" name="message" rows="30"></textarea>
+            </div>
+            <div class="form-field">
+                <input type="submit" class="form-submit" value="Submit">
+            </div>
+        
+            <% 
+                if(typeof errors !== 'undefined'){
+                    for(var error of errors){
+                        %>
+                        <h3 class="error"><%= error.msg %></h3>
+                        <%
+                    }
+                }
+            %>
+        </form>
+    </section>
+</main>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#message' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+<%- include('_layouts/footer') -%>

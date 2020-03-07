@@ -1,0 +1,23 @@
+{
+  "name": "origami",
+  "version": "1.0.0",
+  "description": "My Awesome Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kalpana",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "ejs": "*",
+    "express-validator": "*",
+    "express-session": "*",
+    "connect-flash": "*",
+    "express-messages": "*",
+    "mongoose": "*",
+    "express-fileupload": "*",
+    "fs-extra": "*"
+  }
+}

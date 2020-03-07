@@ -1,0 +1,53 @@
+<%- include('_layouts/header') -%>
+<nav>
+        <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/editHeader/header">Edit Header</a></li>
+            <li><a href="/contact">Add Page</a></li>
+            <li><a class="active" href="/allpages">View Pages</a></li>   
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+<main>
+    <section>
+        <h1>Edit Page</h1>
+        <form method="POST" action="/edit/<%= page._id%>" enctype="multipart/form-data">
+            <div class="form-field">
+                <label for="title">Title:</label>
+                <input type="text" class="form-input" name="title" value="<%= page.pagetitle%>">
+            </div>
+            <div class="form-field">
+                <label for="slug">Slug:</label>
+                <input type="text" class="form-input" name="slug" value="<%= page.slug%>">
+            </div>
+            <div class="form-field">
+                <label for="myimage">Image:</label>
+                <input type="file" class="form-input" name="myimage" id="myimage" value="<%= page.image%>" >
+            </div>
+            <div class="form-field">
+                <label for="message">Content:</label>
+                <textarea id="message" name="message"><%= page.message%></textarea>
+            </div>
+            <div class="form-field">
+                <input type="submit" class="form-submit" value="Update">
+            </div>
+        </form>
+        <% 
+            if(typeof errors !== 'undefined'){
+                for(var error of errors){
+                    %>
+                    <h3><%= error.msg %></h3>
+                    <%
+                }
+            }
+        %>
+    </section>
+</main>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#message' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+<%- include('_layouts/footer') -%>

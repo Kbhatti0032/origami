@@ -1,0 +1,43 @@
+<%- include('_layouts/header') -%>
+<nav>
+	<ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a class="active" href="/editHeader/header">Edit Header</a></li>
+        <li><a href="/contact">Add Page</a></li>
+        <li><a href="/allpages">View Pages</a></li>   
+        <li><a href="/logout">Logout</a></li>
+	</ul>
+</nav>
+<main>
+    <section>
+        <h1>Edit Header</h1>
+        <form method="POST" action="/editHeader" enctype="multipart/form-data">
+            <div class="form-field">
+                <label for="name">Name:</label>
+                <input type="text" class="form-input" name="name" value="<%=header.pagetitle%>">
+            </div>
+            <div class="form-field">
+                <label for="myimage">Image:</label>
+                <input type="file" class="form-input" name="myimage" id="myimage" value="<%=header.logo%>">
+              
+            </div>
+            <div class="form-field">
+                <label for="myimage">Logo:</label>
+                <img src="/contact_images/<%=header.logo%>" width="200" height="200">
+            </div>
+            <div class="form-field">
+                <input type="submit" class="form-submit" value="Update">
+            </div>
+        </form>
+        <% 
+            if(typeof errors !== 'undefined'){
+                for(var error of errors){
+                    %>
+                    <h3><%= error.msg %></h3>
+                    <%
+                }
+            }
+        %>
+    </section>
+</main>
+<%- include('_layouts/footer') -%>

@@ -1,0 +1,34 @@
+<%- include('_layouts/header') -%>
+<nav>
+	<ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/editHeader/header">Edit Header</a></li>
+        <li><a href="/contact">Add Page</a></li>
+        <li><a class="active" href="/allpages">View Pages</a></li>
+        <li><a href="/logout">Logout</a></li>
+	</ul>
+</nav>
+<main>
+    <section>
+        <h1 class="center">All pages</h1>
+        <table class="page-list">
+            <tr>
+                <th>Page Title</th>
+                <th>Slug</th>
+                <th colspan="2">Manage</th>
+            </tr>
+            <% pages.forEach(function(page){
+                %>
+                <tr>
+                    <td><%= page.pagetitle%></td>
+                    <td><%= page.slug%></td>
+                    <td><a href="/edit/<%=page._id%>">Edit</a></td>
+                    <td><a href="/delete/<%=page._id%>">Delete</a></td>
+                </tr>
+                <%
+            });%>
+           
+        </table>
+    </section>
+</main>
+<%- include('_layouts/footer') -%>

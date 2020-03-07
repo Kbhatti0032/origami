@@ -1,0 +1,25 @@
+<%- include('_layouts/header') -%>
+<nav>
+	<ul class="menu">
+			<% pages.forEach(function(page){
+				%>
+				<li>
+					<a class="active" href="/single/<%= page.pagetitle%>"><%= page.pagetitle%></a>
+				</li>
+                <%
+        }); %>
+			
+		</ul>
+</nav>
+	<main>
+		<section>
+			<div class="left width35">
+				<img src="/contact_images/<%= page.image %>">
+			</div>
+			<div class="right width65">
+				<%-page.message%>
+			</div>
+			<div class="clear"></div>
+		</section>
+	</main>
+	<%- include('_layouts/footer') -%>

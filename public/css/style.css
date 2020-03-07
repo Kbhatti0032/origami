@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Aclonica');
+body{
+	max-width: 1024px;
+	margin: 10px auto;
+	box-shadow: 0 0 10px whitesmoke;
+	padding: 0px;
+	font-family:'Aclonica';
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	background-image: url('../images/background.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	color: white;
+}
+.cover{
+	background-color: #f0513c;
+	padding: 20px;
+}
+.left{
+	float: left;
+}
+h1{
+	text-align: center;
+	font-weight: bold;
+}
+h2{
+	margin-left: 10px;
+}
+.right{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.menu{
+	list-style-type: none;
+	text-align: center;
+	padding: 0px;
+}
+.menu li{
+	display: inline-block;
+	margin: 7px;
+}
+nav{
+	border: 2px solid grey;
+	box-shadow: 1px 3px 3px white;	
+	background-color: black;
+	opacity: 0.8;
+}
+nav li a:hover {
+	color: orange;
+}
+nav li a.active {
+	color: orange;
+	text-decoration: none;
+}
+.menu li a  {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 20px;
+}
+.menu li a:hover{
+	color: orange;
+}
+
+.logo{
+	width: 90px;
+}
+.cursive{
+	font-family:'Aclonica';
+	font-size: 32px;
+	color: black;
+}
+.width45{
+	width: 48%;
+	margin: 1%;
+}
+.width65{
+	width: 68%;
+	margin: 1%;
+}
+
+.width35{
+	width: 28%;
+	margin: 1%;
+}
+.left img{
+	max-width: 100%;
+}
+footer{
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	border-top: 2px solid white;
+	padding-top: 10px;
+}
+.leftBorder{
+	border-radius: 100px 0 0 0;
+}
+.rightBorder{
+	border-radius: 0 0 100px 0;
+}
+
+form .form-field label {
+	width: 40%;
+	float: left;
+	margin-left: 20px;
+	font-size: 18px;
+}
+
+.form-field {
+	clear: both;
+}
+
+form .form-field .form-input {
+	float: left;
+	width: 56%;
+	height: 35px;
+	font-family:Aclonica ;
+	margin: 0 0 10px 0;
+}
+
+form {
+	width: 600px;
+	margin: 20px auto 40px;
+	box-shadow: 0 0 10px white;
+	padding: 20px;
+}
+
+.form-submit {
+	border: 2px solid black;
+	width: 200px;
+	height: 40px;
+	font-size: 18px;
+	margin: 20px auto;
+	display: block;
+	font-family:'Aclonica';
+	font-weight: bold;
+	background: transparent;
+	color: black;
+	cursor: pointer;
+}
+.form-submit:hover{
+	background: black;
+	color: orange;
+	border-color: orange;
+	font-style: bold;
+}
+.center{
+	text-align: center;
+}
+.login {
+	border: 2px solid black;
+	width: 100px;
+	padding: 10px;
+	font-size: 18px;
+	display: block;
+	text-decoration: none;
+	background: transparent;
+	color: black;
+	cursor: pointer;
+	float: right;
+	text-align: center;
+}
+.login:hover{
+	border: 2px solid orange;
+	width: 100px;
+	padding: 10px;
+	font-size: 18px;
+	display: block;
+	background: black;
+	color: orange;
+	cursor: pointer;
+	float: right;
+	text-align: center;
+}
+
+.error{
+	color:#f03232;
+	font-style:italic;
+}
+.ck.ck-content {
+	color: black;
+}
+table.page-list{
+	border: 2px solid white;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+	margin: 20px auto;
+}
+table.page-list th{
+	font-size: 1.25em;
+	font-weight: bold;
+	background:black ;
+	padding: 10px;
+	color: white;
+}
+table.page-list td, table.page-list th{
+	border: 2px solid white;
+	padding: 5px 10px;
+	width: 150px;
+	color: white;
+	text-align: center;
+	font-size: 1.15em;
+}
+table.page-list td a{
+	color:white;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 1em;
+}
+table.page-list td a:hover{
+	color: orange;
+	border-radius: 10px;
+	padding: 6px;
+}
